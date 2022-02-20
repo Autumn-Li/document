@@ -1,0 +1,12 @@
+inux备份命令
+tar -zcvf 目标目录/.tar.gz 当前目录 项目.jar
+解压tar.gz文件 tar -xzvf
+查询进程中线程个数 
+top -H -p PID
+linux查看每个文件夹大小
+du --max-depth=1 -h
+linux查看磁盘空间
+df -lh
+docker命令
+docker run -m 1G --memory-swap 3G--name kibana --net elastic -p 5601:5601 -e "ELASTICSEARCH_HOSTS=http://elasticsearch:9200" docker.elastic.co/kibana/kibana:7.16.0
+docker run --name elasticsearch --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms64m -Xmx512m" docker.elastic.co/elasticsearch/elasticsearch:7.16.0
